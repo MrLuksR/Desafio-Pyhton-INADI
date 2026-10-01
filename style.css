@@ -1,0 +1,600 @@
+:root {
+    --ink: #18243a;
+    --muted: #5d6b82;
+    --blue: #315efb;
+    --purple: #7048e8;
+    --gold: #f4b740;
+    --orange: #f07835;
+    --green: #2e9d68;
+    --bg: #f5f7fc;
+    --card: #ffffff;
+    --line: #e4e8f0;
+}
+
+
+/* ==========================================
+   CONFIGURACIÓN GENERAL
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, Segoe UI, Arial, sans-serif;
+    color: var(--ink);
+    background: linear-gradient(
+        135deg,
+        #f6f8ff 0%,
+        #fffaf2 55%,
+        #f5f8ff 100%
+    );
+}
+
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero {
+    min-height: 470px;
+    padding: 55px 7vw 45px;
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #263b9b,
+        #5c3ed4 55%,
+        #8a49c9
+    );
+
+    color: white;
+}
+
+
+/* Círculos decorativos */
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+
+    border-radius: 50%;
+    opacity: 0.13;
+    background: #fff;
+}
+
+.hero::before {
+    width: 360px;
+    height: 360px;
+
+    right: -90px;
+    top: -120px;
+}
+
+.hero::after {
+    width: 240px;
+    height: 240px;
+
+    left: -100px;
+    bottom: -130px;
+}
+
+
+/* Contenido principal del hero */
+
+.hero-content {
+    max-width: 1120px;
+    margin: auto;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ==========================================
+   BADGE
+========================================== */
+.badge-conf{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.badge {
+    display: inline-flex;
+    height: 10%;
+
+    padding: 8px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   TÍTULOS DEL HERO
+========================================== */
+
+h1 {
+    font-size: clamp(40px, 7vw, 78px);
+    line-height: 0.95;
+
+    margin: 22px 0 16px;
+
+    max-width: 850px;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.55;
+
+    max-width: 760px;
+
+    color: #eef0ff;
+}
+
+
+/* ==========================================
+   INFORMACIÓN DEL DESAFÍO
+========================================== */
+
+.brief {
+    margin-top: 28px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.brief span {
+    padding: 10px 14px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    font-size: 14px;
+    font-weight: 650;
+}
+
+
+/* ==========================================
+   PERSONAJE
+========================================== */
+
+.character {
+    position: absolute;
+
+    right: 400px;
+    top: 0px;
+
+    width: 190px;
+    height: 210px;
+}
+
+.character img{
+    width: 500px;
+}
+
+
+/* ==========================================
+   CONTENEDOR PRINCIPAL
+========================================== */
+
+main {
+    max-width: 1120px;
+
+    margin: auto;
+    padding: 45px 22px 70px;
+}
+
+
+/* ==========================================
+   TÍTULOS DE SECCIÓN
+========================================== */
+
+.section-title {
+    font-size: 31px;
+
+    margin: 0 0 8px;
+}
+
+.lead {
+    color: var(--muted);
+
+    font-size: 17px;
+    line-height: 1.6;
+
+    margin-top: 0;
+}
+
+
+/* ==========================================
+   GRID DE TARJETAS
+========================================== */
+
+.card-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin: 26px 0 40px;
+}
+
+
+/* ==========================================
+   TARJETAS
+========================================== */
+
+.card {
+    background: var(--card);
+
+    border: 1px solid var(--line);
+    border-radius: 20px;
+
+    padding: 24px;
+
+    box-shadow: 0 12px 35px rgba(37, 49, 80, 0.07);
+}
+
+
+/* Número de etapa */
+
+.card .num {
+    font-size: 13px;
+    font-weight: 800;
+
+    color: var(--purple);
+
+    letter-spacing: 1px;
+}
+
+
+/* Título de tarjeta */
+
+.card h3 {
+    margin: 8px 0;
+
+    font-size: 20px;
+}
+
+
+/* Texto de tarjeta */
+
+.card p {
+    color: var(--muted);
+
+    line-height: 1.55;
+}
+
+
+/* ==========================================
+   BLOQUES DE DESAFÍO
+========================================== */
+
+.challenge {
+    background: #fff;
+
+    border-radius: 26px;
+    border: 1px solid var(--line);
+
+    padding: 32px;
+    margin: 24px 0;
+
+    box-shadow: 0 14px 45px rgba(37, 49, 80, 0.08);
+}
+
+.challenge h2 {
+    font-size: 27px;
+
+    margin: 0 0 8px;
+}
+
+
+/* Etiqueta */
+
+.challenge .tag {
+    display: inline-block;
+
+    padding: 6px 10px;
+
+    background: #eef1ff;
+    color: #4b3db5;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+
+/* ==========================================
+   HISTORIA / CONSIGNA
+========================================== */
+
+.story {
+    background: linear-gradient(
+        120deg,
+        #fff8e4,
+        #fff
+    );
+
+    border-left: 7px solid var(--gold);
+
+    padding: 20px 22px;
+
+    border-radius: 14px;
+
+    line-height: 1.65;
+}
+
+
+/* ==========================================
+   PASOS
+========================================== */
+
+.steps {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+
+    margin-top: 20px;
+}
+
+.step {
+    padding: 18px;
+
+    border-radius: 16px;
+
+    background: #f7f9fd;
+
+    border: 1px solid #e8ecf4;
+}
+
+.step strong {
+    display: block;
+
+    margin-bottom: 7px;
+}
+
+
+/* ==========================================
+   REQUISITOS
+========================================== */
+
+.requirements {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+
+/* Cada requisito */
+
+.req {
+    display: flex;
+
+    gap: 12px;
+
+    align-items: flex-start;
+
+    padding: 15px;
+
+    border-radius: 14px;
+
+    background: #f8fbf9;
+
+    border: 1px solid #dceee5;
+}
+
+.req b {
+    color: var(--green);
+}
+
+
+/* ==========================================
+   EMPRESA
+========================================== */
+
+.company {
+    margin-top: 45px;
+
+    padding: 35px;
+
+    border-radius: 26px;
+
+    background: linear-gradient(
+        135deg,
+        #19233a,
+        #273b61
+    );
+
+    color: white;
+}
+
+.company h2 {
+    margin-top: 0;
+
+    font-size: 30px;
+}
+
+.company p {
+    color: #dce4f4;
+
+    line-height: 1.65;
+}
+
+
+/* ==========================================
+   CONTRATO
+========================================== */
+
+.contract {
+    margin-top: 20px;
+
+    padding: 20px;
+
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+/* ==========================================
+   BLOQUE FINAL
+========================================== */
+
+.final {
+    margin-top: 35px;
+
+    text-align: center;
+
+    padding: 40px 25px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(
+        135deg,
+        #fff4cf,
+        #fff
+    );
+
+    border: 1px solid #f0dfaa;
+}
+
+.final h2 {
+    font-size: 34px;
+
+    margin: 0 0 10px;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+footer {
+    text-align: center;
+
+    color: #6c778b;
+
+    padding: 20px;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 800px) {
+
+    .card-grid,
+    .steps,
+    .requirements {
+        grid-template-columns: 1fr;
+    }
+
+    .character {
+        display: none;
+    }
+
+    .hero {
+        min-height: 410px;
+    }
+}
+
+/* ==========================================
+   TARJETAS COMPLETADAS
+========================================== */
+
+.card {
+    position: relative;
+    cursor: pointer;
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* Estado completado */
+.card.completed {
+    background: #effaf4;
+    border-color: #2e9d68;
+    box-shadow: 0 12px 35px rgba(46, 157, 104, 0.18);
+}
+
+/* ✓ de completado */
+.card.completed::after {
+    content: "✓ Completado";
+
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    padding: 7px 11px;
+
+    border-radius: 999px;
+
+    background: var(--green);
+    color: white;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    animation: checkAppear 0.25s ease-out;
+}
+
+/* Cambia el color de algunos textos al completar */
+.card.completed .num {
+    color: var(--green);
+}
+
+.card.completed h3 {
+    color: #23794f;
+}
+
+/* Animación del ✓ */
+@keyframes checkAppear {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
